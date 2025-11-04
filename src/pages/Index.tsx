@@ -342,8 +342,8 @@ const Index = () => {
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border"
                   ></textarea>
-                  <Button className="w-full bg-accent hover:bg-accent/90" size="lg">
-                    Отправить заявку
+                  <Button className="w-full bg-accent hover:bg-accent/90" size="lg" asChild>
+                    <a href="mailto:TD.Povolzhje@yandex.ru">Отправить заявку</a>
                   </Button>
                 </form>
               </CardContent>
