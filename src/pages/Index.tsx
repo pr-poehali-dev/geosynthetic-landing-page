@@ -382,8 +382,8 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Контакты</h4>
               <div className="space-y-2 text-primary-foreground/80">
-                <p>+7 (800) 123-45-67</p>
-                <p>info@geosnab.ru</p>
+                <p>+7 (999) 141-65-80</p>
+                <p>TD.Povolzhje@yandex.ru</p>
                 <p>г. Москва, Промышленная ул., д. 15</p>
               </div>
             </div>
