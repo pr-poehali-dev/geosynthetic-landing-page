@@ -16,8 +16,8 @@ const Index = () => {
             <a href="#about" className="text-primary-foreground hover:text-accent transition-colors">О компании</a>
             <a href="#contacts" className="text-primary-foreground hover:text-accent transition-colors">Контакты</a>
           </nav>
-          <Button size="sm" className="bg-accent hover:bg-accent/90">
-            Получить прайс
+          <Button size="sm" className="bg-accent hover:bg-accent/90" asChild>
+            <a href="mailto:TD.Povozhje@yandex.ru">Получить прайс</a>
           </Button>
         </div>
       </header>
