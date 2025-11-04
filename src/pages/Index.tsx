@@ -17,8 +17,7 @@ const Index = () => {
             <a href="#contacts" className="text-primary-foreground hover:text-accent transition-colors">Контакты</a>
           </nav>
           <Button size="sm" className="bg-accent hover:bg-accent/90" asChild>
-            <a href="mailto:TD.Povozhje@yandex.ru">Получить прайс
-на WhatsApp</a>
+            <a href="mailto:TD.Povozhje@yandex.ru">Получить прайс</a>
           </Button>
         </div>
       </header>
