@@ -384,13 +384,13 @@ const Index = () => {
               <div className="space-y-2 text-primary-foreground/80">
                 <p>+7 (999) 141-65-80</p>
                 <p>TD.Povolzhje@yandex.ru</p>
-                <p>г. Москва, Промышленная ул., д. 15</p>
+                <p>603032, г. Н.Новгород, ул. Памирская, дом  11А, помещение П2, офис 307</p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-            <p>© 2024 ГеоСнаб. Все права защищены.</p>
+            <p>© 2013-2025 ГК "ПОВОЛЖЬЕ". Все права защищены.</p>
           </div>
         </div>
       </footer>
