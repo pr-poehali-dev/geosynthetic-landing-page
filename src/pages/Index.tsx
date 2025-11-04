@@ -287,7 +287,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Телефон/WhatsApp</h3>
-                  <a href="tel:+78001234567" className="text-xl text-accent hover:underline">+7 (999) 141-65-80</a>
+                  <a href="https://wa.me/79991416580" target="_blank" rel="noopener noreferrer" className="text-xl text-accent hover:underline">+7 (999) 141-65-80</a>
                   <p className="text-sm text-muted-foreground"></p>
                 </div>
               </div>
