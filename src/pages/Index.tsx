@@ -363,7 +363,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold mb-4">ГеоСнаб</div>
+              <div className="text-2xl font-bold mb-4">ГК "ПОВОЛЖЬЕ"</div>
               <p className="text-primary-foreground/80">
                 Поставки геосинтетики по всей России. Качество, скорость, надежность.
               </p>
