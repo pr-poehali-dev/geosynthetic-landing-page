@@ -298,7 +298,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Email</h3>
-                  <a href="mailto:info@geosnab.ru" className="text-xl text-accent hover:underline">TD.Povolzhje@yandex.ru</a>
+                  <a href="mailto:TD.Povolzhje@yandex.ru" className="text-xl text-accent hover:underline">TD.Povolzhje@yandex.ru</a>
                 </div>
               </div>
 
