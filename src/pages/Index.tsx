@@ -313,7 +313,14 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Офис</h3>
-                  <p className="text-muted-foreground">603032, г. Н.Новгород, ул. Памирская, дом  11А, помещение П2, офис 307</p>
+                  <a 
+                    href="https://yandex.ru/maps/?text=603032, г. Н.Новгород, ул. Памирская, дом 11А" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    603032, г. Н.Новгород, ул. Памирская, дом  11А, помещение П2, офис 307
+                  </a>
                 </div>
               </div>
             </div>
