@@ -172,6 +172,14 @@ const Index = () => {
                 ]
               },
               { 
+                name: "Габионы", 
+                desc: "Сетчатые конструкции для укрепления", 
+                icon: "Boxes",
+                images: [
+                  "https://cdn.poehali.dev/projects/bafd65ba-226c-4c1a-bb60-cb4c832d8f51/files/e766c4f2-9573-4f4e-9070-7032ca756b5c.jpg"
+                ]
+              },
+              { 
                 name: "Сварка Мембраны", 
                 desc: "Профессиональная сварка геомембран", 
                 icon: "Flame", 
