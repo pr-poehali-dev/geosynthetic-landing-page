@@ -137,7 +137,7 @@ const Index = () => {
                 ]
               },
               { 
-                name: "Геомембраны", 
+                name: "Геомембрана", 
                 desc: "HDPE, LDPE мембраны для гидроизоляции", 
                 icon: "Shield",
                 images: [
@@ -145,7 +145,7 @@ const Index = () => {
                 ]
               },
               { 
-                name: "Георешетки", 
+                name: "Георешетка", 
                 desc: "Для укрепления грунтов и откосов", 
                 icon: "Grid3x3",
                 images: [
@@ -153,7 +153,7 @@ const Index = () => {
                 ]
               },
               { 
-                name: "Геосетки", 
+                name: "Геосетка", 
                 desc: "Армирование дорожных покрытий", 
                 icon: "Network",
                 images: [
