@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useState } from "react";
 
 const Index = () => {
+  const [openDialog, setOpenDialog] = useState<number | null>(null);
   return (
     <div className="min-h-screen">
       <header className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 border-b border-border">
@@ -118,7 +128,7 @@ const Index = () => {
               { name: "Георешетки", desc: "Для укрепления грунтов и откосов", icon: "Grid3x3" },
               { name: "Геосетки", desc: "Армирование дорожных покрытий", icon: "Network" },
               { name: "Дренажные материалы", desc: "Дренажные маты и композиты", icon: "Droplets" },
-              { name: "Новый продукт", desc: "Описание нового продукта", icon: "Package" },
+              { name: "Сварка Мембраны", desc: "Профессиональная сварка геомембран", icon: "Flame", details: "Мы предоставляем услуги профессиональной сварки геомембран с использованием современного оборудования. Гарантируем качественные и надежные швы, соответствующие всем стандартам. Опытные специалисты, выезд на объект, контроль качества на всех этапах работы." },
               { name: "Геокомпозиты", desc: "Многофункциональные материалы", icon: "Box" }
             ].map((product, idx) => (
               <Card key={idx} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-accent animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
@@ -128,9 +138,27 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-3">{product.name}</h3>
                   <p className="text-muted-foreground mb-4">{product.desc}</p>
-                  <Button variant="link" className="text-accent p-0 h-auto">
-                    Подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
-                  </Button>
+                  {product.details ? (
+                    <Dialog open={openDialog === idx} onOpenChange={(open) => setOpenDialog(open ? idx : null)}>
+                      <DialogTrigger asChild>
+                        <Button variant="link" className="text-accent p-0 h-auto">
+                          Подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-2xl">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl">{product.name}</DialogTitle>
+                          <DialogDescription className="text-base pt-4">
+                            {product.details}
+                          </DialogDescription>
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
+                  ) : (
+                    <Button variant="link" className="text-accent p-0 h-auto">
+                      Подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
