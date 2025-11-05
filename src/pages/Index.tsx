@@ -137,7 +137,37 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="prices" className="py-20 bg-background">
+      <section id="geocomposites" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Геокомпозиты</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { name: "Геокомпозит дренажный", desc: "Эффективный отвод воды с высокой прочностью", icon: "Droplets" },
+              { name: "Геокомпозит армирующий", desc: "Усиление грунтов и дорожных конструкций", icon: "Shield" },
+              { name: "Геокомпозит защитный", desc: "Защита гидроизоляции от повреждений", icon: "ShieldCheck" },
+              { name: "Геокомпозит фильтрующий", desc: "Фильтрация и дренаж в одном материале", icon: "Filter" },
+              { name: "Геокомпозит противоэрозионный", desc: "Предотвращение размыва грунтов", icon: "Mountain" },
+              { name: "Геокомпозит теплоизоляционный", desc: "Теплоизоляция и дренаж", icon: "Flame" }
+            ].map((product, idx) => (
+              <Card key={idx} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-accent animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <CardContent className="pt-6">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={product.icon as any} size={28} className="text-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">{product.name}</h3>
+                  <p className="text-muted-foreground mb-4">{product.desc}</p>
+                  <Button variant="link" className="text-accent p-0 h-auto">
+                    Подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="prices" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Цены и условия</h2>
