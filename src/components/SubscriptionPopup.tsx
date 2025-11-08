@@ -10,6 +10,7 @@ const SubscriptionPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [timeLeft, setTimeLeft] = useState(600);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -23,6 +24,22 @@ const SubscriptionPopup = () => {
       return () => clearTimeout(timer);
     }
   }, []);
+
+  useEffect(() => {
+    if (!isOpen || timeLeft <= 0) return;
+
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [isOpen, timeLeft]);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
 
   const handleClose = () => {
     setIsOpen(false);
@@ -56,11 +73,16 @@ const SubscriptionPopup = () => {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
+          <div className="text-center mb-2">
+            <div className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold">
+              Осталось {formatTime(timeLeft)} ⏰
+            </div>
+          </div>
           <DialogTitle className="text-2xl font-bold text-center">
-            Получите скидку 10%! 🎁
+            Скидка 10% на первый заказ! 🎁
           </DialogTitle>
           <DialogDescription className="text-center text-base">
-            Подпишитесь на наш канал или оставьте контакты и получите специальное предложение
+            Подпишитесь сейчас и получите специальное предложение
           </DialogDescription>
         </DialogHeader>
         
@@ -129,15 +151,18 @@ const SubscriptionPopup = () => {
         </div>
 
         <div className="border-t pt-4">
-          <div className="flex items-start gap-3 text-sm">
-            <Icon name="Sparkles" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+          <div className="grid grid-cols-3 gap-3 text-center text-sm">
             <div>
-              <p className="font-semibold">Что вы получите:</p>
-              <ul className="text-muted-foreground space-y-1 mt-1">
-                <li>✓ Скидка 10% на первый заказ</li>
-                <li>✓ Эксклюзивные предложения</li>
-                <li>✓ Полезные советы по геосинтетике</li>
-              </ul>
+              <div className="text-2xl font-bold text-accent">500+</div>
+              <div className="text-muted-foreground">клиентов</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-accent">10%</div>
+              <div className="text-muted-foreground">скидка</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-accent">24ч</div>
+              <div className="text-muted-foreground">доставка</div>
             </div>
           </div>
         </div>

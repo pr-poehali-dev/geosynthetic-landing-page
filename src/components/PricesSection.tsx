@@ -49,20 +49,33 @@ const PricesSection = () => {
           </Card>
         </div>
 
-        <div className="text-center mt-12 space-y-4">
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8" asChild>
-            <a href="https://wa.me/79991416580">Запросить расчет</a>
-          </Button>
-          
-          <div>
-            <Button size="lg" className="bg-[#0088cc] hover:bg-[#006699] text-white" asChild>
-              <a href="https://t.me/+tNkgLYPWUm00NDli" target="_blank" rel="noopener noreferrer">
-                <Icon name="Send" size={20} className="mr-2" />
-                Наш канал в Telegram
-              </a>
-            </Button>
-          </div>
-        </div>
+        <Card className="border-2 border-accent mt-12 max-w-2xl mx-auto bg-accent/5">
+          <CardContent className="pt-6 text-center">
+            <div className="mb-4">
+              <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full font-semibold mb-3">
+                🎁 Специальное предложение
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Скидка 10% на первый заказ</h3>
+              <p className="text-muted-foreground">
+                Свяжитесь с нами сейчас и получите выгодное предложение
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8" asChild>
+                <a href="https://wa.me/79991416580">
+                  <Icon name="MessageCircle" size={20} className="mr-2" />
+                  Получить скидку
+                </a>
+              </Button>
+              <Button size="lg" className="bg-[#0088cc] hover:bg-[#006699] text-white" asChild>
+                <a href="https://t.me/+tNkgLYPWUm00NDli" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" size={20} className="mr-2" />
+                  Наш Telegram
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
