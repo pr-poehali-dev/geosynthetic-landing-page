@@ -13,9 +13,8 @@ const Header = () => {
         <nav className="hidden md:flex gap-6">
           <a href="#advantages" className="text-primary-foreground hover:text-accent transition-colors">Преимущества</a>
           <a href="#products" className="text-primary-foreground hover:text-accent transition-colors">Продукция</a>
+          <a href="#calculator" className="text-primary-foreground hover:text-accent transition-colors">Калькулятор</a>
           <a href="#prices" className="text-primary-foreground hover:text-accent transition-colors">Цены</a>
-          <a href="#delivery" className="text-primary-foreground hover:text-accent transition-colors">Доставка</a>
-          <a href="#about" className="text-primary-foreground hover:text-accent transition-colors">О компании</a>
           <a href="#contacts" className="text-primary-foreground hover:text-accent transition-colors">Контакты</a>
         </nav>
         <Button size="sm" className="bg-accent hover:bg-accent/90" asChild>
