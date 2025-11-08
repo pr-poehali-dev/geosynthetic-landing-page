@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const AboutSection = () => {
@@ -76,6 +77,15 @@ const AboutSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button size="lg" className="bg-[#0088cc] hover:bg-[#006699] text-white" asChild>
+            <a href="https://t.me/gkpovolzhie" target="_blank" rel="noopener noreferrer">
+              <Icon name="Send" size={20} className="mr-2" />
+              Наш канал в Telegram
+            </a>
+          </Button>
         </div>
       </div>
     </section>

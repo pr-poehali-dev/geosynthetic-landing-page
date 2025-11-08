@@ -86,7 +86,7 @@ const ContactsSection = () => {
           </Card>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center space-y-8">
           <Card className="border-2 max-w-2xl mx-auto">
             <CardContent className="pt-6">
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -99,6 +99,13 @@ const ContactsSection = () => {
               </p>
             </CardContent>
           </Card>
+          
+          <Button size="lg" className="bg-[#0088cc] hover:bg-[#006699] text-white" asChild>
+            <a href="https://t.me/gkpovolzhie" target="_blank" rel="noopener noreferrer">
+              <Icon name="Send" size={20} className="mr-2" />
+              Наш канал в Telegram
+            </a>
+          </Button>
         </div>
       </div>
     </section>

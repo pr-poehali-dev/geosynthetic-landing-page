@@ -49,10 +49,19 @@ const PricesSection = () => {
           </Card>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 space-y-4">
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8" asChild>
             <a href="https://wa.me/79991416580">Запросить расчет</a>
           </Button>
+          
+          <div>
+            <Button size="lg" className="bg-[#0088cc] hover:bg-[#006699] text-white" asChild>
+              <a href="https://t.me/gkpovolzhie" target="_blank" rel="noopener noreferrer">
+                <Icon name="Send" size={20} className="mr-2" />
+                Наш канал в Telegram
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
